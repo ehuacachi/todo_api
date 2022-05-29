@@ -6,6 +6,8 @@ import com.sacavix.todoapp.persistence.entity.Task;
 import com.sacavix.todoapp.persistence.entity.TaskStatus;
 import com.sacavix.todoapp.persistence.repository.TaskRepository;
 import com.sacavix.todoapp.service.dto.TaskInDTO;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +17,9 @@ import java.util.Optional;
 
 @Service
 public class TaskService {
-
+	
+//	@Autowired o por constructor --> ambos nos sirven para inyectar dependencias
+//	final --> Inmutabilidad, para que no sea cambiable
     private final TaskRepository repository;
     private final TaskInDTOToTask mapper;
 
